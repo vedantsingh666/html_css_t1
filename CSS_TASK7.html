@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration Form</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+            }
+            
+            .registration-box {
+                width: 800px;
+                padding: 20px;
+                border: 1px solid #ccc;
+                background-color: #bd155d;
+                border-radius: 5px;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            }
+
+            .registration-heading {
+                text-align: center;
+                color: rgb(255, 255, 255);
+            }
+            
+            .registration-box label {
+                display: block;
+                font-weight: bold;
+                margin-bottom: 5px;
+            }
+            
+            .registration-box input[type="text"],
+            .registration-box input[type="password"],
+            .registration-box input[type="email"],
+            .registration-box input[type="number"],
+            .registration-box select,
+            .registration-box textarea {
+                width: 100%;
+                padding: 8px;
+                margin-bottom: 10px;
+                border: 1px solid #ccc;
+                border-radius: 3px;
+                box-sizing: border-box;
+            }
+            
+            .registration-box input[type="radio"],
+            .registration-box input[type="checkbox"] {
+                margin-right: 10px;
+            }
+            
+            
+            .registration-box .register-btn {
+                align-self: center;
+                background-color: #ffffff;
+                color: rgb(0, 0, 0);
+                padding: 10px 15px;
+                border: none;
+                border-radius: 3px;
+                cursor: pointer;
+                float: center;
+                font-style:oblique;
+            }
+            
+            .registration-box .login-link {
+                text-align: right;
+                margin-top: 10px;
+            }
+
+            .radio-group {
+            display: inline-block;
+            }  
+
+            .registration-box table {
+            width: 100%;
+            border-collapse: collapse; 
+            border: 1px solid #9f094a;
+            background-color:#9f094a;
+            }
+        
+            .registration-box th, .registration-box td {
+            padding: 8px;
+            } 
+        </style>
+    </head>
+<body>
+
+<div class="registration-box">
+    <h1 class="registration-heading">Registration Form</h1>
+    
+    <form action="submit_form.php" method="post">
+        <table>
+            <tr>
+                <td><label for="firstname">First Name:</label></td>
+                <td><input type="text" id="firstname" name="firstname" required></td>
+            </tr>
+            <tr>
+                <td><label for="lastname">Last Name:</label></td>
+                <td><input type="text" id="lastname" name="lastname" required></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email:</label></td>
+                <td><input type="email" id="email" name="email" required></td>
+            </tr>
+            <tr>
+                <td><label for="password">Password:</label></td>
+                <td><input type="password" id="password" name="password" required></td>
+            </tr>
+            <tr>
+                <td><label for="PhoneNumber">Phone Number:</label></td>
+                <td><input type="number" id="PhoneNumber" name="PhoneNumber" required></td>
+            </tr>
+            <tr>
+                <td><label>Gender:</label></td>
+                <td>
+                    <div class="radio-group">
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="male">Male</label>
+                    </div><br>
+                    <div class="radio-group">
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Female</label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Language</label></td>
+                <td>
+                    <select id="Language" name="Language" required>
+                            <option value="English">English</option>
+                            <option value="Hindi">Hindi</option>
+                            <option value="German">German</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="zip">Zipcode:</label></td>
+                <td><input type="number" id="zip" name="zip" required></td>
+            </tr>
+            <tr>
+                <td><label for="About">About:</label></td>
+                <td><textarea id="About" name="About" required>Write About yoursel</textarea></td>
+            </tr>
+        <tr><td>
+            <div>
+            <input type="submit" class="register-btn" value="Register">
+            </div>
+        </td>
+        </tr>
+    </table>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration Form</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+            }
+            
+            .registration-box {
+                width: 800px;
+                padding: 20px;
+                border: 1px solid #ccc;
+                background-color: #f9f9f9;
+                border-radius: 5px;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            }
+
+            .registration-heading {
+                text-align: center;
+                color: blue;
+            }
+
+            .registration-box table {
+                width: 100%;
+            }
+            
+            .registration-box label {
+                display: block;
+                font-weight: bold;
+                margin-bottom: 5px;
+            }
+            
+            .registration-box input[type="text"],
+            .registration-box input[type="password"],
+            .registration-box input[type="email"],
+            .registration-box input[type="number"],
+            .registration-box select,
+            .registration-box textarea {
+                width: 100%;
+                padding: 8px;
+                margin-bottom: 10px;
+                border: 1px solid #ccc;
+                border-radius: 3px;
+                box-sizing: border-box;
+            }
+            
+            .registration-box input[type="radio"],
+            .registration-box input[type="checkbox"] {
+                margin-right: 10px;
+            }
+            
+            .registration-box .language-checkbox {
+                display: inline-block;
+                margin-right: 10px;
+            }
+            
+            .registration-box .register-btn {
+                background-color: #4CAF50;
+                color: white;
+                padding: 10px 15px;
+                border: none;
+                border-radius: 3px;
+                cursor: pointer;
+                float: right;
+            }
+            
+            .registration-box .login-link {
+                text-align: right;
+                margin-top: 10px;
+            }
+
+            .radio-group {
+            display: inline-block;
+            }  
+
+            .registration-box table {
+            width: 100%;
+            border-collapse: collapse; /* Add border-collapse property */
+            border: 1px solid #ccc; /* Add border style */
+            }
+        
+            .registration-box th, .registration-box td {
+            border: 1px solid #ccc; /* Add border style for table cells */
+            padding: 8px;
+            } 
+        </style>
+    </head>
+<body>
+
+<div class="registration-box">
+    <h1 class="registration-heading">Registration Form</h1>
+    
+    <form action="submit_form.php" method="post">
+        <table>
+            <tr>
+                <td><label for="firstname">First Name:</label></td>
+                <td><input type="text" id="firstname" name="firstname" required></td>
+            </tr>
+            <tr>
+                <td><label for="lastname">Last Name:</label></td>
+                <td><input type="text" id="lastname" name="lastname" required></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email:</label></td>
+                <td><input type="email" id="email" name="email" required></td>
+            </tr>
+            <tr>
+                <td><label for="password">Password:</label></td>
+                <td><input type="password" id="password" name="password" required></td>
+            </tr>
+            <tr>
+                <td><label for="repassword">Re-Password:</label></td>
+                <td><input type="password" id="repassword" name="repassword" required></td>
+            </tr>
+            <tr>
+                <td><label>Gender:</label></td>
+                <td>
+                    <div class="radio-group">
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="male">Male</label>
+                    </div><br>
+                    <div class="radio-group">
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Female</label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="age">Age:</label></td>
+                <td><input type="number" id="age" name="age" required></td>
+            </tr>
+            <tr>
+                <td><label for="phone">Phone Number:</label></td>
+                <td><input type="text" id="phone" name="phone" required></td>
+            </tr>
+            <tr>
+                <td><label for="address">Address:</label></td>
+                <td><textarea id="address" name="address" rows="4" required></textarea></td>
+            </tr>
+            <tr>
+                <td><label for="state">State:</label></td>
+                <td><input type="text" id="state" name="state" required></td>
+            </tr>
+            <tr>
+                <td><label for="country">Country:</label></td>
+                <td>
+                    <select id="country" name="country" required>
+                        <option value="us">United States</option>
+                        <option value="ca">Canada</option>
+                        <option value="uk">United Kingdom</option>
+                        <option value="Ind">India</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Language Known:</label></td>
+                <td>
+                    <div class="radio-group">
+                        <input type="checkbox" id="english" name="languages" value="english" class="language-checkbox">
+                        <label for="english"> English </label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="checkbox" id="kannada" name="languages" value="kannada" class="language-checkbox">
+                        <label for="kannada"> Kannada </label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="checkbox" id="hindi" name="languages" value="hindi" class="language-checkbox">
+                        <label for="hindi"> Hindi </label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="checkbox" id="telegu" name="languages" value="telegu" class="language-checkbox">
+                        <label for="telegu"> Telegu </label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="checkbox" id="declaration" name="declaration" required>
+                    <label for="declaration">Hereby I declare the given information is true</label>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><div class="login-link">
+                    <p>Login to <a href="#">Ethnus</a> website. </p>
+                </div></td>
+            </tr>
+        </table>
+        <div>
+            <input type="submit" class="register-btn" value="Register">
+        </div>
+    </form>
+</div>
+</body>
+</html>
